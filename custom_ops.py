@@ -16,7 +16,7 @@ from tensorpack.tfutils.varreplace import custom_getter_scope
 __all__ = ['BatchNorm', 'BatchRenorm']
 
 @layer_register()
-def InstanceNorm5d(x, epsilon=1e-5, use_affine=True, gamma_init=None, data_format='channels_last'):
+def InstanceNorm(x, epsilon=1e-5, use_affine=True, gamma_init=None, data_format='channels_last'):
     data_format = get_data_format(data_format, tfmode=False)
     shape = x.get_shape().as_list()
     if len(shape) == 5:
